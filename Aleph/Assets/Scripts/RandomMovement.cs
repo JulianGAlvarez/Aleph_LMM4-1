@@ -9,6 +9,8 @@ public class RandomMovement : MonoBehaviour
     public float speed;
 
     public Transform moveSpot;
+    public Transform player;
+    public float maxDist;
     public float minX, maxX;
     public float minY, maxY;
 
@@ -38,16 +40,24 @@ public class RandomMovement : MonoBehaviour
                 waitTime -= Time.deltaTime;
             }
         }
+
+        if(Vector2.Distance(transform.position, player.position) < maxDist)
+        {
+            startWaitTime = 1;
+            speed = 30f;
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
       
 
             if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             moveSpot.position = new Vector2(0, -9.3f);
-            startWaitTime = 10;
+            startWaitTime = 1;
             speed = 20f;
         }
         else
         {
+            
             speed = 10f;
         }
 

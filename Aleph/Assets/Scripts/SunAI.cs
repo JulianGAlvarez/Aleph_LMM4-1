@@ -37,7 +37,7 @@ public class SunAI : MonoBehaviour
         //Update the Path creation
 
         if(seeker.IsDone())
-           seeker.StartPath(rb.position, -target.position, OnPathComplete);
+           seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
     void OnPathComplete(Path p)

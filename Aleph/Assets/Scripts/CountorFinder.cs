@@ -11,7 +11,7 @@ public class CountorFinder : WebCamera
     [SerializeField] private float CurveAccuracy = 10f;
     [SerializeField] private float MinArea = 5000f;
     [SerializeField] private int WindowOffset = 5;
-    [SerializeField] private PolygonCollider2D PolygonCollider;
+   
     public Vector2[] vectorList;
     
     public float contourX, contourY;
@@ -35,7 +35,7 @@ public class CountorFinder : WebCamera
        width = image.Width;
        height = image.Height;
        
-       PolygonCollider.pathCount = 0;
+      
 
        foreach(Point[] contour in contours)
         {
@@ -64,8 +64,7 @@ public class CountorFinder : WebCamera
                     drawContour(processImage, new Scalar(125, 125, 125), 2, points);
                 }
                 
-                PolygonCollider.pathCount++;
-                PolygonCollider.SetPath(PolygonCollider.pathCount - 1, toVector2(points));
+               
 
                 
 

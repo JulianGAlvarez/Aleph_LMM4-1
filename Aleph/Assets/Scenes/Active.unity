@@ -327,6 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102098197}
   - component: {fileID: 102098198}
+  - component: {fileID: 102098199}
   m_Layer: 0
   m_Name: sunFace
   m_TagString: Untagged
@@ -392,7 +393,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5256efc5cc53b0b40bf79ae8443c7ff1, type: 3}
-  m_Color: {r: 0.509434, g: 0.21958362, b: 0, a: 1}
+  m_Color: {r: 0.509434, g: 0.21958362, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -402,6 +403,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &102098199
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102098196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 179dc7577b72f694aba346eee39d6d14, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &103364764
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,67 +522,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &180036259
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 180036261}
-  - component: {fileID: 180036260}
-  m_Layer: 6
-  m_Name: BrightPlayer
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!60 &180036260
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180036259}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
---- !u!4 &180036261
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180036259}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.229, y: 15.36, z: 0}
-  m_LocalScale: {x: 0.028409472, y: -0.028409472, z: 0.028409472}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180956581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1389,7 @@ RectTransform:
   m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2578,7 +2537,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 3
+  m_LinearDrag: 4
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 45093d972e63ae7498a6f93b59f8e00b, type: 2}
@@ -2598,9 +2557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 332905090a5b7764a9b6b8d6d02c7a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1628600908}
+  target: {fileID: 1472490083}
   splashEffect: {fileID: 1362543525108630081, guid: 0c440f8c8ca05d146b6fd0c534063a06, type: 3}
-  speed: 1200
+  speed: 1800
   nextWayPointDistance: 2
   enemyGFX: {fileID: 102098197}
 --- !u!114 &1335356457
@@ -2937,7 +2896,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1472490084
 SpriteRenderer:
@@ -3002,13 +2961,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240a6b281ebbf324d9380a99eb0a0322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWaitTime: 2
+  startWaitTime: 6
   speed: 10
   moveSpot: {fileID: 1545089479}
-  minX: -9.5
-  maxX: 9.5
-  minY: -10
-  maxY: 10
+  player: {fileID: 1628600908}
+  maxDist: 5
+  minX: -8.5
+  maxX: 8.5
+  minY: -9
+  maxY: 9
 --- !u!1 &1477307764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,7 +3306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605713488
 GameObject:
@@ -4485,7 +4446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2408775491243794249, guid: 9410e3417a5c61b41a1135f8c62a69f7, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2408775491243794249, guid: 9410e3417a5c61b41a1135f8c62a69f7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4569,7 +4530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2408775493078646221, guid: 9410e3417a5c61b41a1135f8c62a69f7, type: 3}
       propertyPath: Threshold
-      value: 250
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2408775493078646221, guid: 9410e3417a5c61b41a1135f8c62a69f7, type: 3}
       propertyPath: CurveAccuracy
@@ -4578,7 +4539,7 @@ PrefabInstance:
     - target: {fileID: 2408775493078646221, guid: 9410e3417a5c61b41a1135f8c62a69f7, type: 3}
       propertyPath: PolygonCollider
       value: 
-      objectReference: {fileID: 180036260}
+      objectReference: {fileID: 0}
     - target: {fileID: 2408775493078646221, guid: 9410e3417a5c61b41a1135f8c62a69f7, type: 3}
       propertyPath: ShowProcessedImage
       value: 1
