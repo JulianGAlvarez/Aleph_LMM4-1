@@ -3223,6 +3223,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: portal_00
       objectReference: {fileID: 0}
+    - target: {fileID: 1834224946174466874, guid: 8fac3bb14ae80bb48b4c75ee3621e857, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee50fbdbfbe14f44f840da3b694a0547, type: 3}
+    - target: {fileID: 1834224946174466874, guid: 8fac3bb14ae80bb48b4c75ee3621e857, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1834224946174466876, guid: 8fac3bb14ae80bb48b4c75ee3621e857, type: 3}
       propertyPath: m_Enabled
       value: 1
