@@ -9,7 +9,7 @@ public class Fade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartFade());
+        
         
     }
 
@@ -24,11 +24,15 @@ public class Fade : MonoBehaviour
             transitionFade.SetTrigger("End");
         }
 
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            StartCoroutine(StartFade());
+        }
     }
 
     IEnumerator StartFade()
     {
-        yield return new WaitForSeconds(3 * Time.deltaTime);
+        yield return new WaitForSeconds(transitionTime * Time.deltaTime);
         transitionFade.SetTrigger("Start");
     }
 }

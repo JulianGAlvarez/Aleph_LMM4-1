@@ -5,7 +5,6 @@ namespace OpenCvSharp.Demo
 	using UnityEngine.UI;
 	using OpenCvSharp;
 
-	[System.Serializable]
 	// Many ideas are taken from http://answers.unity3d.com/questions/773464/webcamtexture-correct-resolution-and-ratio.html#answer-1155328
 
 	/// <summary>
