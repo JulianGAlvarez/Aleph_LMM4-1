@@ -26,10 +26,12 @@ public class RandomMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, speed * Time.deltaTime);
 
-        if(Vector2.Distance(transform.position, moveSpot.position) < 0.2f)
+        
+
+        if (Vector2.Distance(transform.position, moveSpot.position) < 0.5f)
         {
             if(waitTime <= 0)
             {
@@ -43,9 +45,12 @@ public class RandomMovement : MonoBehaviour
 
         if(Vector2.Distance(transform.position, player.position) < maxDist)
         {
-            startWaitTime = 1;
-            speed = 30f;
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            // startWaitTime = 1;
+            //speed = 30f;
+            //transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+
+            moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+            waitTime = startWaitTime;
         }
       
 
