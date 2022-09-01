@@ -18,16 +18,20 @@ public class Fade : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-
-            transitionFade.SetTrigger("End");
-        }
-
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
+            transitionTime = 10f;
             StartCoroutine(StartFade());
+
+
         }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transitionFade.SetTrigger("End");
+          
+        }
+
+ 
     }
 
     IEnumerator StartFade()
@@ -35,4 +39,5 @@ public class Fade : MonoBehaviour
         yield return new WaitForSeconds(transitionTime * Time.deltaTime);
         transitionFade.SetTrigger("Start");
     }
+   
 }

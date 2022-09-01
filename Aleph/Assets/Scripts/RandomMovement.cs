@@ -20,7 +20,8 @@ public class RandomMovement : MonoBehaviour
        
         waitTime = startWaitTime;
 
-        moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        moveSpot.position = new Vector2(0, -9.3f);
+        // moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
     }
     
     // Update is called once per frame
@@ -54,17 +55,12 @@ public class RandomMovement : MonoBehaviour
         }
       
 
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+        
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             moveSpot.position = new Vector2(0, -9.3f);
-            startWaitTime = 1;
-            speed = 20f;
         }
-        else
-        {
-            
-            speed = 10f;
-        }
+        
 
 
     }

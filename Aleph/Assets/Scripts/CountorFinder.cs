@@ -61,11 +61,8 @@ public class CountorFinder : WebCamera
                 }
                 if (!isOutOfWindow) {
                     position = new Vector2(pointX, pointY);
-                    drawContour(processImage, new Scalar(125, 125, 125), 2, points);
+                   
                 }
-                
-               
-
                 
 
             }
@@ -95,19 +92,11 @@ public class CountorFinder : WebCamera
         {
             vectorList[i] = new Vector2(points[i].X, points[i].Y);
 
-
             contourX = points[i].X /2;
             contourY = points[i].Y / 2;
             
         }
         return vectorList;
     }
-    private void drawContour(Mat Image, Scalar Color, int Thickness, Point[] Points)
-    {
-        for(int i = 1; i < Points.Length; i++)
-        {
-            Cv2.Line(Image,Points[i-1], Points[i], Color, Thickness);
-        }
-        Cv2.Line(Image, Points[Points.Length - 1], Points[0], Color, Thickness);
-    }
+   
 }

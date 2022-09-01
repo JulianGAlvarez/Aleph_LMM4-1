@@ -35,11 +35,8 @@ public class LevelLoader : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
 
-            FindObjectOfType<AudioManager>().PlaySound("PortalAbierto");
-            
-
+            FindObjectOfType<AudioManager>().PlaySound("PortalAbierto");      
             transitionBreach.SetTrigger("Close");
-
 
         }
 
