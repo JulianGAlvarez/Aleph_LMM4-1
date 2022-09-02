@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 103364766}
   m_Layer: 6
   m_Name: sol_SolIzquierdoContorno
-  m_TagString: Untagged
+  m_TagString: Suns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -470,7 +470,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -1.1, y: 0.00000047683716}
   serializedVersion: 2
-  m_Radius: 11.97
+  m_Radius: 9.43
 --- !u!212 &103364767
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 361712380}
   m_Layer: 6
   m_Name: sol_SolIzquierdoContorno
-  m_TagString: Untagged
+  m_TagString: Suns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -789,7 +789,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.80432063, y: -0.58432084}
   serializedVersion: 2
-  m_Radius: 9.4
+  m_Radius: 9
 --- !u!212 &361712381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionFade: {fileID: 782398842}
-  transitionTime: 6
+  transitionTime: 12
 --- !u!4 &809999878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4650934519801105574, guid: a517032a95da42f4a9ade2f5fb39e9be, type: 3}
@@ -2670,7 +2670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240a6b281ebbf324d9380a99eb0a0322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWaitTime: 3
+  startWaitTime: 1
   speed: 12
   moveSpot: {fileID: 1545089479}
   player: {fileID: 1628600908}
@@ -2853,7 +2853,19 @@ PrefabInstance:
     - target: {fileID: 1834224946174466874, guid: 8fac3bb14ae80bb48b4c75ee3621e857, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ee50fbdbfbe14f44f840da3b694a0547, type: 3}
+      objectReference: {fileID: 21300000, guid: 642425f87ff931f4f8460b6ab9e4ac95, type: 3}
+    - target: {fileID: 1834224946174466874, guid: 8fac3bb14ae80bb48b4c75ee3621e857, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834224946174466874, guid: 8fac3bb14ae80bb48b4c75ee3621e857, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834224946174466874, guid: 8fac3bb14ae80bb48b4c75ee3621e857, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7320576
+      objectReference: {fileID: 0}
     - target: {fileID: 1834224946174466874, guid: 8fac3bb14ae80bb48b4c75ee3621e857, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -3722,6 +3734,54 @@ PrefabInstance:
     - target: {fileID: 1037754395314092241, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f57aaddf2ab33340a14a8c94c35151d, type: 3}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Risa
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 032c6851b606fcf4c8670aa67d477b1f, type: 3}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Bufido
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[2].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037754395314092242, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
+      propertyPath: sounds.Array.data[3].spatialBlend
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1037754395314092243, guid: 91fa36f1219762e42ac12302b99a15ff, type: 3}
       propertyPath: m_RootOrder

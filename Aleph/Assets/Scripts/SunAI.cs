@@ -61,10 +61,12 @@ public class SunAI : MonoBehaviour
         //If we reached the end of the Path
         if(currentWaypoint >= path.vectorPath.Count)
         {
+           
             reachedEndOfPath = true;
             return;
         } else
         {
+      
             reachedEndOfPath = false;
         }
 
@@ -97,12 +99,15 @@ public class SunAI : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Player")
+        FindObjectOfType<AudioManager>().PlaySound("Risa");
+
+        if(collision.collider.tag == "Suns")
         {
-            GameObject e = Instantiate(splashEffect) as GameObject;
-            e.transform.position = transform.position;
+            FindObjectOfType<AudioManager>().PlaySound("Bufido");
         }
     }
+
+
 
 
 }

@@ -36,10 +36,14 @@ public class RandomMovement : MonoBehaviour
         {
             if(waitTime <= 0)
             {
+               
                 moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                 waitTime = startWaitTime;
+               
+
             } else
             {
+                
                 waitTime -= Time.deltaTime;
             }
         }
@@ -58,6 +62,7 @@ public class RandomMovement : MonoBehaviour
         
         if (Input.GetKey(KeyCode.RightArrow))
         {
+
             moveSpot.position = new Vector2(0, -9.3f);
         }
         
